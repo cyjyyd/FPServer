@@ -70,7 +70,7 @@ namespace VanguardServer
                 serverSocket.Bind(new IPEndPoint(IPAddress.Any, port));
                 serverSocket.Listen(10);
 
-                Console.WriteLine(DateTime.Now+"<INFO:FPServer>:"+"服务器启动于端口:"+port.ToString());
+                ConsoleManager.Log(0,127,null,"服务器主程序","已成功在端口"+port.ToString()+"启用");
 
                 startAccept(null);
             }
