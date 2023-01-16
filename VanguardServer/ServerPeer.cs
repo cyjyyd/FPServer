@@ -54,7 +54,7 @@ namespace VanguardServer
             {
                 serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 acceptSemaphore = new Semaphore(maxCount, maxCount);
-
+                
                 //直接new出最大数量的连接对象
                 clientPeerPool = new ClientPeerPool(maxCount);
                 ClientPeer tmpClientPeer = null;
